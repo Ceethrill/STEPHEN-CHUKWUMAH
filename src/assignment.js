@@ -13,24 +13,33 @@ const assignment = {};
  * @param {Array} arrayOfNumbers the array of numbers to sum
  * @returns number the sum of the numbers
  */
+
+/*
+[1, 2, 3, 4].reduce((a, b) => a + b, 0)
+*/
+
 function sumOfNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+    return arrayOfNumbers.reduce((partialAddition, x) => partialAddition + x, 0);  
 }
-// assignment.sumOfNumbers = sumOfNumbers;
+assignment.sumOfNumbers = sumOfNumbers;
 
 /**
  * Challenge - 2
  * 
- * Count all even numbers within an array of numbers.
+ *Count all even numbers within an array of numbers.
  * If you did Challenge - 2, remove the comment in the line just after this function
  * 
  * @param {Array} arrayOfNumbers the array containing even or non-even numbers
  * @returns number the count of even numbers
  */
+
+
 function countEvenNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+    var evenNumbers = arrayOfNumbers.filter(number => 
+                                           number % 2 == 0);
+    return evenNumbers.length;
 }
-// assignment.countEvenNumbers = countEvenNumbers;
+ assignment.countEvenNumbers = countEvenNumbers;
 
 /**
  * Challenge - 3
